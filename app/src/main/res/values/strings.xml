@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Corona</string>
+    <string name="map_name">COVID 19</string>
+
 </resources>
