@@ -5,6 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/toolbar">
+        <TextView
+            android:id="@+id/map_main_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/map_name"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
 
 
 </LinearLayout>
