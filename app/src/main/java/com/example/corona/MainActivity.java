@@ -9,7 +9,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         SearchView searchView;
         searchView = findViewById(R.id.main_search);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
             @Override
             public boolean onQueryTextSubmit(String query) {
                 //검색 버튼이 눌러졌을 때 이벤트 처리
