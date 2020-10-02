@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,15 +46,31 @@
                 android:background="@drawable/alrim_icon_round" />
         </LinearLayout>
 
-        <!--검색창-->
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/main_search"
+<!--        &lt;!&ndash;navigation drawer&ndash;&gt;-->
+<!--        <NavigationView-->
+<!--            android:id="@+id/navigationView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start"-->
+<!--            app:headerLayout="@layout/navigation_header"-->
+<!--            app:menu="@menu/navigation_menu" />-->
+
+        <!--검색창 자리-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_gravity="center"
             android:layout_margin="10dp"
-            app:iconifiedByDefault="false"
-            app:queryHint="위치를 검색하세요"/>
+            android:orientation="horizontal">
+        </LinearLayout>
+        <!--검색창(현재 오류)-->
+<!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:id="@+id/main_search"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            app:iconifiedByDefault="true"-->
+<!--            app:queryHint="위치를 검색하세요"/>-->
 
         <!--확진자 현황-->
         <LinearLayout
@@ -118,28 +133,29 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/web_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="web"/>
 
             <Button
+                android:id="@+id/chat_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="chat"/>
 
             <Button
+                android:id="@+id/map_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="map"/>
 
-                android:layout_weight="1" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
         </LinearLayout>
 
     </LinearLayout>

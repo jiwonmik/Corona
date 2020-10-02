@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LocationActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <!--상단바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/toolbar"
+            android:orientation="horizontal"
+            android:weightSum="13">
+            <!--메뉴아이콘-->
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="2"
+                android:background="@drawable/menu_icon_round" />
+            <!--타이틀이름-->
+            <TextView
+                android:id="@+id/map_main_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:text="@string/map_name"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+            <!--알림아이콘-->
+            <ImageView
+                android:id="@+id/alrim_icon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="2"
+                android:background="@drawable/alrim_icon_round" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
