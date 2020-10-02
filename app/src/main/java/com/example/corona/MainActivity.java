@@ -1,12 +1,18 @@
 package com.example.corona;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final int sub = 1001; /*다른 액티비티를 띄우기 위한 요청코드(상수)*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
+
+        //최근 확진자 발견 위치 버튼
+        Button location_Btn = (Button) findViewById(R.id.location_btn);
+        location_Btn.setOnClickListener(new Button.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),LocationActivity.class);
+                startActivityForResult(intent, sub);
+            }
+        });
+
+   }
 
    }

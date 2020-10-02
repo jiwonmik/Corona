@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.corona">
 
-    <uses-permission android:name="android.permission.INTERNET" />              <!--반드시 추가-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>   <!--위치정보활용시 추가-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!--위치정보활용시 추가-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>      <!--WIFI 상태활용시 추가-->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 반드시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 위치정보활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 위치정보활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- WIFI 상태활용시 추가 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,22 +15,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".LocationActivity"></activity>
         <activity
             android:name=".SubMainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".WebActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="r00dz0i84h" />

@@ -75,7 +75,40 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:background="@color/main_menu"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="13dp"
+                    android:layout_weight="1"
+                    android:text="최근 확진자 발견 위치"
+                    android:textAlignment="center"
+                    android:textColor="#736F6F"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/location_btn"
+                    android:layout_width="300dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="#F2C029"
+                    android:gravity="center|center_vertical"
+                    android:text="Button" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <!--하단 버튼-->
         <LinearLayout
