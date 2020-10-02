@@ -25,7 +25,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".WebActivity"/>
+        <activity android:name=".WebActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="r00dz0i84h" />
